@@ -1,8 +1,8 @@
-from nginx
+from ubuntu
 
-RUN apt-get update -y && apt-get install -y wget
-RUN wget https://raw.githubusercontent.com/minepicco/container-tech/master/index.html
-RUN chmod +x index.html
-RUN mv -f index.html /usr/share/nginx/html/
+RUN apt-get update -y 
+# && apt-get -y install ubuntu-desktop 
+# RUN apt-get install -y vnc4server
+CMD "dd if=/dev/zero of=128kb bs=2g count=1"
 
 EXPOSE 80

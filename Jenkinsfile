@@ -1,17 +1,12 @@
 pipeline {
-  agent any
-  stages {
-    stage('1') {
-      steps {
-        sh '''#!/bin/bash
-
-echo "hello world"'''
-      }
+    agent {
+        docker { image 'node:7-alpine' }
     }
-    stage('2') {
-      steps {
-        echo 'test'
-      }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
     }
-  }
 }
